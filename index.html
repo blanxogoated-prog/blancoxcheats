@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolfes - Premium Software Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Wolfes</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#dashboard" class="nav-link" data-page="dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item" id="authLink">
+                    <a href="#login" class="nav-link" data-page="login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Premium Software Solutions</h1>
+                    <p class="hero-subtitle">Discover cutting-edge tools and applications designed for professionals</p>
+                    <button class="cta-button" onclick="showPage('login')">Get Started</button>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <div class="container">
+                    <h2 class="section-title">Why Choose SoftwareVault?</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Lightning Fast</h3>
+                            <p>Optimized performance for maximum productivity</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔒</div>
+                            <h3>Secure</h3>
+                            <p>Enterprise-grade security for your peace of mind</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📱</div>
+                            <h3>Cross-Platform</h3>
+                            <p>Works seamlessly across all your devices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="video-section">
+  <div class="container">
+    <h2 class="section-title">Product Showcase</h2>
+
+    <div class="video-grid">
+      <div class="video-box">
+        <div class="video-content">
+          <iframe
+            src="https://www.youtube.com/embed/58s4n91ErAY"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="video-title">Product Demo 1</p>
+      </div>
+
+      <div class="video-box">
+        <div class="video-content">
+          <iframe
+            src="https://www.youtube.com/embed/58s4n91ErAY"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="video-title">Product Demo 2</p>
+      </div>
+
+      <!-- يمكنك تكرار video-box ب iframe مختلف حسب الحاجة -->
+    </div>
+  </div>
+</div>
+
+    
+
+
+            <div class="pricing-section">
+                <div class="container">
+                    <h2 class="section-title">Pricing Plans</h2>
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <h3>Basic</h3>
+                            <div class="price">$29</div>
+                            <ul>
+                                <li>Core Features</li>
+                                <li>Email Support</li>
+                                <li>30-day License</li>
+                            </ul>
+                            <button class="btn-primary">Choose Plan</button>
+                        </div>
+                        <div class="pricing-card featured">
+                            <h3>Pro</h3>
+                            <div class="price">$59</div>
+                            <ul>
+                                <li>All Features</li>
+                                <li>Priority Support</li>
+                                <li>Lifetime License</li>
+                            </ul>
+                            <button class="btn-primary">Choose Plan</button>
+                        </div>
+                        <div class="pricing-card">
+                            <h3>Enterprise</h3>
+                            <div class="price">$199</div>
+                            <ul>
+                                <li>Custom Features</li>
+                                <li>24/7 Support</li>
+                                <li>Multi-User License</li>
+                            </ul>
+                            <button  class="btn-primary">Choose Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Page -->
+        <section id="login" class="page">
+            <div class="auth-container">
+                <div class="auth-form">
+                    <h2>Welcome Back</h2>
+                    <form id="loginForm">
+                        <div class="input-group">
+                            <input type="text" id="loginUsername" placeholder="Username" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="loginPassword" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="auth-button">Login</button>
+                    </form>
+                    <p class="auth-switch">
+                        Don't have an account? 
+                        <a href="#" onclick="showPage('register')">Register here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Register Page -->
+        <section id="register" class="page">
+            <div class="auth-container">
+                <div class="auth-form">
+                    <h2>Create Account</h2>
+                    <form id="registerForm">
+                        <div class="input-group">
+                            <input type="text" id="registerUsername" placeholder="Username" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="registerPassword" placeholder="Password" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="registerKey" placeholder="License Key" required>
+                        </div>
+                        <button type="submit" class="auth-button">Register</button>
+                    </form>
+                    <p class="auth-switch">
+                        Already have an account? 
+                        <a href="#" onclick="showPage('login')">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Page -->
+        <section id="dashboard" class="page">
+            <div class="dashboard-container">
+                <div class="dashboard-header">
+                    <h2>User Dashboard</h2>
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+                </div>
+                <div class="dashboard-content">
+                    <div class="user-info-card">
+                        <h3>Account Information</h3>
+                        <div class="info-item">
+                            <span class="label">Username:</span>
+                            <span class="value" id="dashUsername">Loading...</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">License Expires:</span>
+                            <span class="value" id="dashExpiry">Loading...</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Status:</span>
+                            <span class="value status-active" id="dashStatus">Active</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-actions">
+                        <button class="action-btn" onclick="resetHWID()">Reset HWID</button>
+                        <button class="action-btn secondary" onclick="downloadSoftware()">Download lodaer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>Have questions? We're here to help you with any inquiries about our software solutions.</p>
+                        <div class="contact-item">
+                            <strong>Email:</strong> support@softwarevault.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Discord:</strong> SoftwareVault#1234
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="input-group">
+                                <textarea placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="auth-button">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="keyauth.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
