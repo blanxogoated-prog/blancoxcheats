@@ -147,11 +147,11 @@ class NavigationManager {
 // KeyAuth API Manager
 class KeyAuthManager {
     constructor() {
-        this.apiUrl = 'https://keyauth.win/api/1.2/';
-        this.appName = 'cheat';        // Your app name here
-        this.ownerID = 'ODkpNkljhD';   // Your owner id here
-        this.appSecret = '3ebe5ef112f122d6e7433be24400f8c2a38ee5b3867c877cb2efccc53540c8bb'; // Your app secret here
-        this.version = '1.0';
+        this.apiUrl = 'https://keyauth.win/api/1.3/';
+        this.appName = 'Blanxogoated's Application';        // Your app name here
+        this.ownerID = 'RR5uG7dc1a';   // Your owner id here
+        this.appSecret = '651b7b335b593913e2323136213577e60a7051bcb39fcbc618fa4fddc45d2f40'; // Your app secret here
+        this.version = '1.4';
     }
 
     async makeRequest(type, data) {
