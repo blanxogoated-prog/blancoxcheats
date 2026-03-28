@@ -8,9 +8,9 @@ const readline = createInterface({
 })
 
 const KeyAuthApp = new KeyAuth({
-  name: "",
-  ownerid: "",
-  version: "",
+  name: "Blanxogoated's Application",
+  ownerid: "RR5uG7dc1a",
+  version: "1.4",
 })
 
 async function answer() {
